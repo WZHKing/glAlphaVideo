@@ -47,6 +47,7 @@
 
 - (void)commonInit
 {
+    self.contentMode = UIViewContentModeScaleAspectFit;
     self.userInteractionEnabled = NO;
     self.opaque = NO;
     self.backgroundColor = [UIColor clearColor];
