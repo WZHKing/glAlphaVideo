@@ -23,6 +23,7 @@
 		296C81AE23700AC800622AB5 /* ScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 296C81AB23700AC800622AB5 /* ScreenShot.png */; };
 		296C81B12370135E00622AB5 /* gift_glsl.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 296C81AF2370135D00622AB5 /* gift_glsl.fsh */; };
 		296C81B22370135E00622AB5 /* gift_glsl.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 296C81B02370135D00622AB5 /* gift_glsl.vsh */; };
+		4F1E2D3C4B5A69788796A5B3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1E2D3C4B5A69788796A5B2 /* SceneDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		296C8166237003F700622AB5 /* glAlphaVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = glAlphaVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		296C8169237003F700622AB5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		296C816A237003F700622AB5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4F1E2D3C4B5A69788796A5B1 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		4F1E2D3C4B5A69788796A5B2 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		296C816C237003F700622AB5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		296C816D237003F700622AB5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		296C8170237003F700622AB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				296C819E2370063200622AB5 /* AlphaPlayer */,
 				296C8169237003F700622AB5 /* AppDelegate.h */,
 				296C816A237003F700622AB5 /* AppDelegate.m */,
+				4F1E2D3C4B5A69788796A5B1 /* SceneDelegate.h */,
+				4F1E2D3C4B5A69788796A5B2 /* SceneDelegate.m */,
 				296C816C237003F700622AB5 /* ViewController.h */,
 				296C816D237003F700622AB5 /* ViewController.m */,
 				296C819B237005A500622AB5 /* NextViewController.h */,
@@ -319,6 +324,7 @@
 				296C819D237005A500622AB5 /* NextViewController.m in Sources */,
 				296C8179237003FA00622AB5 /* main.m in Sources */,
 				296C816B237003F700622AB5 /* AppDelegate.m in Sources */,
+				4F1E2D3C4B5A69788796A5B3 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -477,7 +483,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -492,7 +498,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = glAlphaVideo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -511,7 +517,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = glAlphaVideo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
