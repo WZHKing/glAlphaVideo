@@ -10,29 +10,36 @@
 
 @interface glAlphaVideoUITests : XCTestCase
 
+@property (nonatomic, strong) XCUIApplication *app;
+
 @end
 
 @implementation glAlphaVideoUITests
 
 - (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-
-    // In UI tests it is usually best to stop immediately when a failure occurs.
     self.continueAfterFailure = NO;
-
-    // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-    [[[XCUIApplication alloc] init] launch];
-
-    // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    self.app = [[XCUIApplication alloc] init];
+    [self.app launch];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    self.app = nil;
 }
 
-- (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testGiftPlaybackKeepsAppInForeground {
+    XCUIElement *firstCell = [self.app.tables.cells elementBoundByIndex:0];
+    XCTAssertTrue([firstCell waitForExistenceWithTimeout:10.0], @"Gift list should appear after launch");
+    [firstCell tap];
+
+    // The gift video is decoded by AVFoundation and rendered by OpenGL ES on a CADisplayLink.
+    // Give it a few frames, then make sure the app is still alive and on screen.
+    [NSThread sleepForTimeInterval:3.0];
+    XCTAssertEqual(self.app.state, XCUIApplicationStateRunningForeground);
+
+    XCTAttachment *attachment = [XCTAttachment attachmentWithScreenshot:[XCUIScreen mainScreen].screenshot];
+    attachment.name = @"gift-playback";
+    attachment.lifetime = XCTAttachmentLifetimeKeepAlways;
+    [self addAttachment:attachment];
 }
 
 @end
